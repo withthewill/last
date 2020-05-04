@@ -1,0 +1,73 @@
+@import '~@alifd/next/variables.scss';
+
+.RegisterBlock {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+}
+
+.innerBlock {
+    width: 416px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    height: 30px;
+}
+
+.desc {
+    color: $color-text1-4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.line {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: $color-text1-2;
+}
+
+.innerBeforeInput {
+    margin-left: 10px;
+    color: $color-text1-2;
+    .line {
+        margin-left: 10px;
+    }
+}
+
+.innerAfterInput {
+    margin-right: 10px;
+    color: $color-text1-2;
+    .line {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.sendCode {
+    max-width: 65px;
+    margin-right: 10px;
+}
+
+.otherLogin {
+    color: #666;
+    font-size: 14px;
+}
+.icon {
+    margin-left: 10px;
+}
+
+.link {
+    color: $color-link-1;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.submitBtn { 
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+@import '~@alifd/next/variables.scss';
+
+.SettingPersonBlock {
+    // width: 90%;
+    margin-top: 40px;
+    // background-color: #000;
+}
+
+.menuIcon {
+  width: 16px; 
+  height: 16px;
+  fill: currentColor;
+  overflow: hidden;
+  // 以上是svg图标通用样式
+
+  margin-right: 5px;
+  font-size: 12px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filesName {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filesRouter{
+    display: flex;
+    margin-bottom: 10px;
+    .goBack{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .now{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
