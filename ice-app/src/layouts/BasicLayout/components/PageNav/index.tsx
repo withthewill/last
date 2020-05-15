@@ -4,7 +4,7 @@ import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
-const SubNav = Nav.SubNav;
+// const SubNav = Nav.SubNav;
 const NavItem = Nav.Item;
 
 export interface IMenuItem {
@@ -27,23 +27,24 @@ function getNavMenuItems(menusData: any[]) {
 }
 
 function getSubMenuOrItem(item: IMenuItem, index: number) {
-  if (item.children && item.children.some(child => child.name)) {
-    const childrenItems = getNavMenuItems(item.children);
-    if (childrenItems && childrenItems.length > 0) {
-      const subNav = (
-        <SubNav
-          key={index}
-          icon={item.icon}
-          label={item.name}
-        >
-          {childrenItems}
-        </SubNav>
-      );
+  
+  // if (item.children && item.children.some(child => child.name)) {
+  //   const childrenItems = getNavMenuItems(item.children);
+  //   if (childrenItems && childrenItems.length > 0) {
+  //     const subNav = (
+  //       <SubNav
+  //         key={index}
+  //         icon={item.icon}
+  //         label={item.name}
+  //       >
+  //         {childrenItems}
+  //       </SubNav>
+  //     );
 
-      return subNav;
-    }
-    return null;
-  }
+  //     return subNav;
+  //   }
+  //   return null;
+  // }
   const navItem = (
     <NavItem key={item.path} icon={item.icon}>
       <Link to={item.path}>

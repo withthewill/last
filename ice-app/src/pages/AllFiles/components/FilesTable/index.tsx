@@ -111,29 +111,13 @@ class FilesTable extends React.Component<any, FilesTableState> {
 
             // 重命名操作
             visibleRename: false,
-            reNameSelect: {
-                id: -1,
-                filesName_id: -1,
-                files_id: -1,
-                filesName: '',
-                fileSize: '',
-                uploadTime: '',
-                path: ''
-            },
+            reNameSelect: {} as pageListType,
             reNameInput: '',
 
             /*移动 */
             moveList: [],
             visibleMove: false,
-            moveSelect: {
-                id: -1,
-                filesName_id: -1,
-                files_id: -1,
-                filesName: '',
-                fileSize: '',
-                uploadTime: '',
-                path: ''
-            },
+            moveSelect: {} as pageListType,
 
             visibleThinkMove: false,
 
@@ -262,7 +246,7 @@ class FilesTable extends React.Component<any, FilesTableState> {
 
     //下载
     download = (dataIndex: pageListType) => {
-        window.location.href = `http://localhost:9001/updown/save?files_id=${dataIndex.files_id}`
+        window.location.href = `http://localhost:9000/updown/save?files_id=${dataIndex.files_id}`
     }
 
     // 搜索
@@ -649,7 +633,7 @@ class FilesTable extends React.Component<any, FilesTableState> {
         imgExtensionName.map((value: string) => {
             if (type.toLowerCase() === value) {
                 this.setState({
-                    imgUrl: `http://localhost:9001/see/show?files_id=${id}`,
+                    imgUrl: `http://localhost:9000/see/show?files_id=${id}`,
                     visibleSee: true,
                     showtype: 'img',
                 })
@@ -659,7 +643,7 @@ class FilesTable extends React.Component<any, FilesTableState> {
 
         if (type.toLowerCase() === '.pdf') {
             this.setState({
-                imgUrl: `http://localhost:9001/see/show?files_id=${id}`,
+                imgUrl: `http://localhost:9000/see/show?files_id=${id}`,
                 visibleSee: true,
                 showtype: 'pdf',
             })

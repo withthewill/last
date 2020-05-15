@@ -16,7 +16,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-intl": "^2.8.0",
-    "react-pdfobject": "^1.1.1"
+    "react-pdfobject": "^1.1.1",
+    "simple-uploader": "^3.0.0"
   },
   "devDependencies": {
     "@ice/spec": "^1.0.0",

@@ -38,7 +38,7 @@ class SimpleUploader extends React.Component<any, SimpleUploaderType> {
 
 
         var uploader = new Uploader({
-            target: "http://localhost:9001/updown/upload", //最终口
+            target: "http://localhost:9000/updown/upload", //最终口
             query: {
                 dateTime: new Date(),
                 name: sessionStorage.getItem('username'), // 将存在file对象中的md5数据携带发送过去。
@@ -47,6 +47,7 @@ class SimpleUploader extends React.Component<any, SimpleUploaderType> {
             testChunks: false,
             chunkSize: 500 * 1024 * 1024
         });
+        console.log(uploader)
         uploader.assignBrowse(document.getElementById('upload'))
         // 文件添加 单个文件
         uploader.on('fileAdded', function (file: any, event: any) {
@@ -130,7 +131,7 @@ class SimpleUploader extends React.Component<any, SimpleUploaderType> {
         const oldList = this.state.uploadList
         for (let i in oldList) {
             if (oldList[i].fileName == file.name) {
-                oldList.splice(i, 1);
+                oldList.splice(parseInt(i), 1);
             }
         }
 
